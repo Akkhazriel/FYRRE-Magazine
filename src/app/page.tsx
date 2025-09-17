@@ -18,7 +18,7 @@ export default function Home() {
 
       <MagazineContent />
 
-      <section id="MagazineList" 
+      <section id="MagazineList"
         className="
           mt-12 
           [@media(min-width:1220px)]:flex [@media(min-width:1220px)]:flex-row [@media(min-width:1220px)]:justify-between [@media(min-width:1220px)]:gap-20 [@media(min-width:1220px)]:items-start 
@@ -161,6 +161,89 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="podcast" className="mt-24">
+        <div className="flex items-center justify-between gap-6">
+          <h2 className="text-[104px] font-semibold uppercase">PODCAST</h2>
+          <Link href="#" className="flex gap-4 uppercase items-center text-[16px] font-bold">
+            All Episodes
+            <Image src="/utils/ri_arrow.svg" alt="Utility icon right" width={16} height={16} />
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          {/* Карточка 1 */}
+          <div className="flex flex-col p-12 border gap-8">
+            <Image
+              src="/podcast/01.jpg"
+              alt="Podcast Cover"
+              width={411}
+              height={407}
+              className="w-full object-cover"
+            />
+            <div className="flex flex-col gap-12">
+              <h3 className="text-[22px] font-bold leading-tight">
+                The Problem of today’s cultural development
+              </h3>
+              <div className="flex items-center gap-6 text-[14px]">
+                <p>
+                  <span className="font-bold">Date </span>16.02.2022
+                </p>
+                <p>
+                  <span className="font-bold">Duration </span>1h 20 min
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Карточка 2 */}
+          <div className="flex flex-col p-12 border gap-8">
+            <Image
+              src="/podcast/02.jpg"
+              alt="Podcast Cover"
+              width={411}
+              height={407}
+              className="w-full object-cover"
+            />
+            <div className="flex flex-col gap-12">
+              <h3 className="text-[22px] font-bold leading-tight">
+                The hidden messages of Jack Nielson
+              </h3>
+              <div className="flex items-center gap-6 text-[14px]">
+                <p>
+                  <span className="font-bold">Date </span>16.02.2022
+                </p>
+                <p>
+                  <span className="font-bold">Duration </span>40 min
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Карточка 3 */}
+          <div className="flex flex-col p-12 border gap-8">
+            <Image
+              src="/podcast/03.jpg"
+              alt="Podcast Cover"
+              width={411}
+              height={407}
+              className="w-full object-cover"
+            />
+            <div className="flex flex-col gap-12">
+              <h3 className="text-[22px] font-bold ">
+                Behind the scenes of the street art culture
+              </h3>
+              <div className="flex items-center gap-6 text-[14px]">
+                <p>
+                  <span className="font-bold">Date </span>16.06.2022
+                </p>
+                <p>
+                  <span className="font-bold">Duration </span>45 min
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
     </div>
   );
 }
