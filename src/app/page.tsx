@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import MagazineContent from "./general/MagazineContent";
 import MagazineCard from "./general/MagazineCard";
+import AuthorCard from "./general/AuthorCard";
 
 import NewsTicker from "./general/NewsTicker";
 
@@ -162,14 +163,14 @@ export default function Home() {
       </section>
 
       <section id="podcast" className="mt-24">
-        <div className="flex items-center justify-between gap-6">
-          <h2 className="text-[104px] font-semibold uppercase">PODCAST</h2>
+        <div className="flex flex-col items-start [@media(min-width:999px)]:flex-row [@media(min-width:999px)]:items-center justify-between [@media(min-width:999px)]:gap-6">
+          <h2 className="sm:text-[82px] md:text-[104px] font-semibold uppercase">PODCAST</h2>
           <Link href="#" className="flex gap-4 uppercase items-center text-[16px] font-bold">
             All Episodes
             <Image src="/utils/ri_arrow.svg" alt="Utility icon right" width={16} height={16} />
           </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-4 grid grid-cols-1 lg:grid-cols-3">
           {/* Карточка 1 */}
           <div className="flex flex-col p-12 border gap-8">
             <Image
@@ -179,11 +180,11 @@ export default function Home() {
               height={407}
               className="w-full object-cover"
             />
-            <div className="flex flex-col gap-12">
+            <div className="flex flex-col gap-12 items-center text-center [@media(min-width:1250px)]:text-start [@media(min-width:1250px)]:items-start">
               <h3 className="text-[22px] font-bold leading-tight">
                 The Problem of today’s cultural development
               </h3>
-              <div className="flex items-center gap-6 text-[14px]">
+              <div className="flex flex-col [@media(min-width:1250px)]:flex-row items-center gap-6 text-[14px]">
                 <p>
                   <span className="font-bold">Date </span>16.02.2022
                 </p>
@@ -204,10 +205,10 @@ export default function Home() {
               className="w-full object-cover"
             />
             <div className="flex flex-col gap-12">
-              <h3 className="text-[22px] font-bold leading-tight">
+              <h3 className="text-[22px] font-bold leading-tight items-center text-center [@media(min-width:1250px)]:text-start [@media(min-width:1250px)]:items-start">
                 The hidden messages of Jack Nielson
               </h3>
-              <div className="flex items-center gap-6 text-[14px]">
+              <div className="flex flex-col [@media(min-width:1250px)]:flex-row items-center gap-6 text-[14px]">
                 <p>
                   <span className="font-bold">Date </span>16.02.2022
                 </p>
@@ -227,11 +228,11 @@ export default function Home() {
               height={407}
               className="w-full object-cover"
             />
-            <div className="flex flex-col gap-12">
+            <div className="flex flex-col gap-12 items-center text-center [@media(min-width:1250px)]:text-start [@media(min-width:1250px)]:items-start">
               <h3 className="text-[22px] font-bold ">
                 Behind the scenes of the street art culture
               </h3>
-              <div className="flex items-center gap-6 text-[14px]">
+              <div className="flex flex-col [@media(min-width:1250px)]:flex-row items-center gap-6 text-[14px]">
                 <p>
                   <span className="font-bold">Date </span>16.06.2022
                 </p>
@@ -243,6 +244,60 @@ export default function Home() {
           </div>
         </div>
 
+      </section>
+
+      <section id="authors" className="mt-[192px]">
+        <div className="flex flex-row items-center justify-between gap-2 [@media(max-width:1310px)]:flex-col [@media(max-width:1310px)]:items-start">
+          <h2 className="sm:text-[82px] md:text-[104px] font-bold uppercase">Authors</h2>
+          <Link href="#" className="flex items-center gap-2  text-[16px] uppercase font-bold">
+            All authors
+            <Image src="/utils/ri_arrow.svg" alt="arrow" width={16} height={16} />
+          </Link>
+        </div>
+        <div className="mt-[96px] grid [@media(max-width:1310px)]:grid-cols-1 justify-center place-items-center grid-cols-2">
+          <AuthorCard
+            imageSrc="/authors/01.jpg"
+            imageAlt="Author's photo"
+            authorName="Jakob Gronberg"
+            jobName="Artist"
+            cityName="Berlin"
+          />
+          <AuthorCard
+            imageSrc="/authors/02.jpg"
+            imageAlt="Author's photo"
+            authorName="Louise Jensen"
+            jobName="Artist"
+            cityName="Stockholm"
+          />
+          <AuthorCard
+            imageSrc="/authors/03.jpg"
+            imageAlt="Author's photo"
+            authorName="Anne Henry"
+            jobName="Photograph"
+            cityName="New York"
+          />
+          <AuthorCard
+            imageSrc="/authors/04.jpg"
+            imageAlt="Author's photo"
+            authorName="Anna Nihelsen"
+            jobName="Columnists"
+            cityName="Copenhugen"
+          />
+          <AuthorCard
+            imageSrc="/authors/05.jpg"
+            imageAlt="Author's photo"
+            authorName="Jane Cooper"
+            jobName="Artist"
+            cityName="Berlin"
+          />
+          <AuthorCard
+            imageSrc="/authors/06.jpg"
+            imageAlt="Author's photo"
+            authorName="Christofer Vaccaro"
+            jobName="Artist"
+            cityName="Lisobon "
+          />
+        </div>
       </section>
     </div>
   );
