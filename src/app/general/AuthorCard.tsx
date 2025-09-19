@@ -19,11 +19,18 @@ export default function AuthorCard({
 }: AuthorCardProps) {
     return (
         // Карточка
-        <div className="[@media(max-width:630px)]:h-[300px] [@media(max-width:630px)]:px-2 px-8 flex flex-row items-center gap-12 w-full max-w-[761px] h-[214px] border border-black">
+        <div className="[@media(max-width:630px)]:h-[300px] [@media(max-width:630px)]:px-2 [@media(max-width:630px)]:flex-col [@media(max-width:630px)]:gap-2 [@media(max-width:630px)]:py-4 px-8 flex flex-row items-center gap-12 w-full max-w-[761px] h-[214px] border border-black">
             {/* Изображение */}
-            <Image src={imageSrc} alt={imageAlt} width={150} height={250} className="rounded-[100%]" />
+            <div className="relative w-[150px] h-[150px] max-[630px]:w-[150px] max-[630px]:h-[150px]">
+                <Image
+                    src={imageSrc}
+                    alt={imageAlt}
+                    fill
+                    className="object-cover rounded-full"
+                />
+            </div>
             {/* Описание карточки */}
-            <div className="flex flex-col items-start gap-4">
+            <div className="flex flex-col items-start gap-4 [@media(max-width:630px)]:items-center">
                 <h3 className="text-[32px] font-bold [@media(max-width:630px)]:text-[24px]">{authorName}</h3>
                 <div className="flex items-center flex-row gap-8 [@media(max-width:630px)]:items-start [@media(max-width:630px)]:flex-col [@media(max-width:630px)]:gap-4">
                     <div className="flex items-center gap-2 flex-row">

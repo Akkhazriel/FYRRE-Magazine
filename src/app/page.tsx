@@ -5,6 +5,7 @@ import MagazineCard from "./general/MagazineCard";
 import AuthorCard from "./general/AuthorCard";
 
 import NewsTicker from "./general/NewsTicker";
+import SectionName from "./general/SectionName";
 
 export default function Home() {
   return (
@@ -164,7 +165,9 @@ export default function Home() {
 
       <section id="podcast" className="mt-24">
         <div className="flex flex-col items-start [@media(min-width:999px)]:flex-row [@media(min-width:999px)]:items-center justify-between [@media(min-width:999px)]:gap-6">
-          <h2 className="sm:text-[82px] md:text-[104px] font-semibold uppercase">PODCAST</h2>
+          <SectionName
+            titleName="Podcast"
+          />
           <Link href="#" className="flex gap-4 uppercase items-center text-[16px] font-bold">
             All Episodes
             <Image src="/utils/ri_arrow.svg" alt="Utility icon right" width={16} height={16} />
@@ -248,7 +251,9 @@ export default function Home() {
 
       <section id="authors" className="mt-[192px]">
         <div className="flex flex-row items-center justify-between gap-2 [@media(max-width:1310px)]:flex-col [@media(max-width:1310px)]:items-start">
-          <h2 className="sm:text-[82px] md:text-[104px] font-bold uppercase">Authors</h2>
+          <SectionName
+            titleName="Authors"
+          />
           <Link href="#" className="flex items-center gap-2  text-[16px] uppercase font-bold">
             All authors
             <Image src="/utils/ri_arrow.svg" alt="arrow" width={16} height={16} />
