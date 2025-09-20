@@ -27,7 +27,7 @@ export default function MagazineCard({
     tagHref,
 }: MagazineCardProps) {
     return (
-        <div className="flex flex-row lg:gap-12 sm:gap-6">
+        <Link href="/magazine" className="flex flex-row lg:gap-12 sm:gap-6">
             {/* Изображение */}
             <div className="flex flex-row sm:max-w-[140px] sm:max-h-[140px] md:max-w-[480px] md:max-h-[480px]">
                 <Image src={imageSrc} alt={imageAlt} width={480} height={480} />
@@ -69,6 +69,6 @@ export default function MagazineCard({
                     </Link>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
