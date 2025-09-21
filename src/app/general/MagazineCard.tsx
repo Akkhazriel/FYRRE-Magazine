@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 interface MagazineCardProps {
     imageSrc: string;
@@ -26,8 +27,9 @@ export default function MagazineCard({
     tag,
     tagHref,
 }: MagazineCardProps) {
+    const router = useRouter();
     return (
-        <Link href="/magazine" className="flex flex-row lg:gap-12 sm:gap-6">
+        <div onClick={() => router.push("/magazine")} className="flex flex-row lg:gap-12 sm:gap-6">
             {/* Изображение */}
             <div className="flex flex-row sm:max-w-[140px] sm:max-h-[140px] md:max-w-[480px] md:max-h-[480px]">
                 <Image src={imageSrc} alt={imageAlt} width={480} height={480} />
@@ -69,6 +71,6 @@ export default function MagazineCard({
                     </Link>
                 </div>
             </div>
-        </Link>
+        </div>
     )
 }

@@ -38,7 +38,7 @@ export default function Magazine() {
         </div>
 
         {/* карточки */}
-        <div className="grid grid-cols-3">
+        <div className="grid [@media(max-width:850px)]:grid-cols-1 [@media(max-width:1250px)]:grid-cols-2 grid-cols-3 justify-items-center">
           {cards
             .filter(
               (c) =>
